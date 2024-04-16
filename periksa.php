@@ -4,7 +4,7 @@ include_once('menu.php');
 include_once('koneksi.php');
 
 $query = "SELECT * FROM periksa";
-$pasiens = $dbh->query($query)
+$periksas = $dbh->query($query)
 ?>
 
 <head>
@@ -20,6 +20,16 @@ $pasiens = $dbh->query($query)
         text-decoration: underline;
     }
 </style>
+
+
+<div class="container-fluid px-4">
+
+        <div class= "d-flex mt-4">
+    
+        <a href="create_pasien.php" class="btn btn-primary ms-auto"><strong>+Tambah P</strong></a>
+        </div>
+
+
 
 <main>
     <div class="container-fluid px-4">
@@ -42,26 +52,26 @@ $pasiens = $dbh->query($query)
 
     <?php 
     $no = 0;
-    foreach ($pasiens as $pasien): 
+    foreach ($periksas as $periksa): 
     ?>
 
 
     <tr>
 
         <td><?php echo $no = $no + 1; ?></td>
-        <td><?= $pasien['tanggal']?></td>
-        <td><?= $pasien['berat']?></td>
-        <td><?= $pasien['tinggi']?></td>
-        <td><?= $pasien['tensi']?></td>
-        <td><?= $pasien['keterangan']?></td>
+        <td><?= $periksa['tanggal']?></td>
+        <td><?= $periksa['berat']?></td>
+        <td><?= $periksa['tinggi']?></td>
+        <td><?= $periksa['tensi']?></td>
+        <td><?= $periksa['keterangan']?></td>
        
        
 
         <td>
-            <a href="index.php" class="btn btn-primary">
+        <a href="periksa_edit.php?id=<?= $periksa['id_data']?>" class="btn btn-primary">
             <i  class="fas fa-edit"></i>
             </a>
-            <a href="#" class="btn btn-danger">
+            <a href="periksa_delete.php?id=<?= $periksa['id_data']?>" class="btn btn-danger">
             <i  class="fas fa-trash"></i>
             </a>
         </td>
