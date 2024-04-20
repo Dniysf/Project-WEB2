@@ -21,7 +21,7 @@ include_once('menu.php');
 <body>
 <main>
     <div class="container-fluid px-4">
-        <marquee><h1 class="mt-4">Selamat datang di halaman Puskesmas.id</h1></marquee>
+        <marquee><h1 class="mt-4">Selamat datang di halaman Puskesmas Cimanggis</h1></marquee>
 
         <!DOCTYPE html>
 <html lang="id">
@@ -133,9 +133,9 @@ img{
 
     <main>
         <section id="beranda">
-            <h2>Selamat Datang di Puskesmas.id</h2>
+            <h2>Selamat Datang di Puskesmas Cimanggis</h2>
             <p>Puskesmas.id adalah platform online yang menghubungkan masyarakat dengan berbagai layanan kesehatan di puskesmas di seluruh Indonesia. Kami ingin membantu Anda menemukan puskesmas terdekat, mengetahui jam buka, dan mengakses berbagai informasi kesehatan lainnya.</p>
-            <a href="#layanan" class="btn">Lihat Layanan</a>
+            <a href="unit_kerja.php" class="btn">Lihat Layanan</a>
         </section>
 
         <section id="layanan">

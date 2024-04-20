@@ -4,7 +4,7 @@ include_once('menu.php');
 include_once('koneksi.php');
 
 $query = "SELECT * FROM unit_kerja";
-$pasiens = $dbh->query($query)
+$unit_kerjas = $dbh->query($query)
 ?>
 
 <head>
@@ -40,17 +40,24 @@ $pasiens = $dbh->query($query)
 
     <?php 
     $no = 0;
-    foreach ($pasiens as $pasien): 
+    foreach ($unit_kerjas as $unit_kerja): 
     ?>
 
 
     <tr>
 
         <td><?php echo $no = $no + 1; ?></td>
-        <td><?= $pasien['unit_ruangan']?></td>
-        <td><?= $pasien['jam_operasional']?></td>
+        <td><?= $unit_kerja['unit_ruangan']?></td>
+        <td><?= $unit_kerja['jam_operasional']?></td>
         
-       
+        <td>
+            <a href="Kerja_edit.php?id=<?= $unit_kerja['id']?>" class="btn btn-primary">
+            <i  class="fas fa-edit"></i>
+            </a>
+            <a href="kerja_delete.php?id=<?= $unit_kerja['id']?>" class="btn btn-danger">
+            <i  class="fas fa-trash"></i>
+            </a>
+        </td>
        
 
 

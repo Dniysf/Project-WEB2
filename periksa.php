@@ -26,7 +26,7 @@ $periksas = $dbh->query($query)
 
         <div class= "d-flex mt-4">
     
-        <a href="create_pasien.php" class="btn btn-primary ms-auto"><strong>+Tambah P</strong></a>
+        <a href="create_periksa.php" class="btn btn-primary ms-auto "><strong>+Tambah</strong></a>
         </div>
 
 
@@ -36,7 +36,7 @@ $periksas = $dbh->query($query)
 
         <div class= "d-flex mt-4">
         <h3>Hasil Periksa</h3>
-        <!-- <a href="#" class="btn btn-primary ms-auto"><strong>+Tambah Pasien</strong></a> -->
+        
         </div>
 
 <table class="table mt-5">
@@ -57,7 +57,7 @@ $periksas = $dbh->query($query)
 
 
     <tr>
-
+  
         <td><?php echo $no = $no + 1; ?></td>
         <td><?= $periksa['tanggal']?></td>
         <td><?= $periksa['berat']?></td>

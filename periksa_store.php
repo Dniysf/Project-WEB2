@@ -3,18 +3,16 @@ include_once('koneksi.php');
 
 //tangkap data
 
-$id = $_POST['id'];                                                             
+$id = $_POST['id'];
 $tanggal = $_POST['tanggal'];
 $berat = $_POST['berat'];
 $tinggi = $_POST['tinggi'];
 $tensi = $_POST['tensi'];
 $keterangan = $_POST['keterangan'];
 
-
-
-
 //queryinsert
-$query = "UPDATE periksa SET tanggal='$tanggal', berat='$berat', tinggi='$tinggi', tensi='$tensi', keterangan='$keterangan' WHERE id_data='$id'";
+$query = "INSERT INTO periksa (tanggal, berat, tinggi, tensi, keterangan ) VALUES 
+('$tanggal', '$berat' , '$tinggi' , '$tensi' , '$keterangan' ) ";
 
 
 //eksekusi query
@@ -34,4 +32,4 @@ if ($dbh->query($query)){
 
 
 
-?> 
+?>

@@ -4,7 +4,7 @@ include_once('menu.php');
 include_once('koneksi.php');
 
 $query = "SELECT * FROM paramedik";
-$pasiens = $dbh->query($query)
+$paramediks = $dbh->query($query)
 ?>
 
 <head>
@@ -26,7 +26,7 @@ $pasiens = $dbh->query($query)
 
         <div class= "d-flex mt-4">
         <h3>Data Diri Paramedik</h3>
-        <!-- <a href="#" class="btn btn-primary ms-auto"><strong>+Tambah Pasien</strong></a> -->
+        <a href="create._paramedik.php" class="btn btn-primary ms-auto"><strong>+Tambah</strong></a>
         </div>
 
 <table class="table mt-5">
@@ -40,28 +40,35 @@ $pasiens = $dbh->query($query)
         <th>Kategori</th>
         <th>No. Telepon</th>
         <th>alamat</th>
-        <th>dokter_id</th>
+        
     </tr>
 
     <?php 
     $no = 0;
-    foreach ($pasiens as $pasien): 
+    foreach ($paramediks as $paramedik): 
     ?>
 
 
     <tr>
 
         <td><?php echo $no = $no + 1; ?></td>
-        <td><?= $pasien['nama']?></td>
-        <td><?= $pasien['gender']?></td>
-        <td><?= $pasien['tmp_lahir']?></td>
-        <td><?= $pasien['tgl_lahir']?></td>
-        <td><?= $pasien['kategori']?></td>
-        <td><?= $pasien['telpon']?></td>
-        <td><?= $pasien['alamat']?></td>
-        <td><?= $pasien['unit_kerja_id']?></td>
-      
+        <td><?= $paramedik['nama']?></td>
+        <td><?= $paramedik['gender']?></td>
+        <td><?= $paramedik['tmp_lahir']?></td>
+        <td><?= $paramedik['tgl_lahir']?></td>
+        <td><?= $paramedik['kategori']?></td>
+        <td><?= $paramedik['telpon']?></td>
+        <td><?= $paramedik['alamat']?></td>
         
+      
+        <td>
+            <a href="paramedik_edit.php?id=<?= $paramedik['id']?>" class="btn btn-primary">
+            <i  class="fas fa-edit"></i>
+            </a>
+            <a href="paramedik_delete.php?id=<?= $paramedik['id']?>" class="btn btn-danger">
+            <i  class="fas fa-trash"></i>
+            </a>
+        </td>
        
 
     </tr>
