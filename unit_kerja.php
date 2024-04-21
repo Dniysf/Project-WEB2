@@ -25,8 +25,8 @@ $unit_kerjas = $dbh->query($query)
     <div class="container-fluid px-4">
 
         <div class= "d-flex mt-4">
-        <h3>Unit Kerja Puskesmas</h3>
-        <!-- <a href="#" class="btn btn-primary ms-auto"><strong>+Tambah Pasien</strong></a> -->
+        <h3>Jadwal Poli Klinik</h3>
+        <a href="create_kerja.php" class="btn btn-primary ms-auto"><strong>+Tambah Layanan</strong></a>
         </div>
 
 <table class="table mt-5">
