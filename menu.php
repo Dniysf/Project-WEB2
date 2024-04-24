@@ -4,7 +4,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Menu</div>
-                    <a class="nav-link" href="index.php">
+                    <a class="nav-link" href="dashboard.php">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
                         Beranda
                     </a>
