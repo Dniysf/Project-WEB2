@@ -1,6 +1,6 @@
 <?php
 include_once('top.php');
-include_once('menu.php');
+//include_once('menu.php');
 include_once('koneksi.php');
 
 $query = "SELECT * FROM periksa";
@@ -14,30 +14,32 @@ $periksas = $dbh->query($query)
 
 </head>
 <style>
-    h1{
+    h3{
         font-family: poppins, sans-serif;
-        font-weight: 500;
-        text-decoration: underline;
+        font-weight: 600;
+        text-align: center;
     }
 </style>
 
-
-<div class="container-fluid px-4">
-
+<main>
+    <div class="container-fluid px-4">
+    <h3 class="mt-5">Periksa</h3>
         <div class= "d-flex mt-4">
-    
-        <a href="create_periksa.php" class="btn btn-primary ms-auto "><strong>+Tambah</strong></a>
+        <a href="dashboard.php" class="btn btn-primary"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i> Kembali</a>
+       
+        <a href="create_periksa.php" class="btn btn-primary ms-auto"><strong>+Tambah</strong></a>
+        
         </div>
 
 
 
 <main>
-    <div class="container-fluid px-4">
+    <!--<div class="container-fluid px-4">
 
         <div class= "d-flex mt-4">
         <h3>Hasil Periksa</h3>
         
-        </div>
+        </div>-->
 
 <table class="table mt-5">
     <tr>

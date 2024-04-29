@@ -5,7 +5,7 @@ $id = $_GET['id'];
 $periksa = $dbh->query("SELECT * FROM periksa WHERE id_data = $id")->fetch();
 
 include_once('top.php');
-include_once('menu.php');
+//include_once('menu.php');
 ?>
 <head>
 

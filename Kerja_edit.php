@@ -5,7 +5,7 @@ $id = $_GET['id'];
 $unit_kerjas = $dbh->query("SELECT * FROM unit_kerja WHERE id = $id")->fetch();
 
 include_once('top.php');
-include_once('menu.php');
+//include_once('menu.php');
 ?>
 <head>
 

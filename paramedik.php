@@ -1,6 +1,5 @@
 <?php
 include_once('top.php');
-include_once('menu.php');
 include_once('koneksi.php');
 
 $query = "SELECT * FROM paramedik";
@@ -14,19 +13,21 @@ $paramediks = $dbh->query($query)
 
 </head>
 <style>
-    h1{
+    h3{
         font-family: poppins, sans-serif;
-        font-weight: 500;
-        text-decoration: underline;
+        font-weight: 600;
+        text-align: center;
     }
 </style>
 
 <main>
     <div class="container-fluid px-4">
-
+    <h3 class="mt-5">Data Paramedik</h3>
         <div class= "d-flex mt-4">
-        <h3>Data Diri Paramedik</h3>
+        <a href="dashboard.php" class="btn btn-primary"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i> Kembali</a>
+       
         <a href="create._paramedik.php" class="btn btn-primary ms-auto"><strong>+Tambah</strong></a>
+        
         </div>
 
 <table class="table mt-5">

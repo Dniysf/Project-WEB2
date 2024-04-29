@@ -5,7 +5,7 @@ $id = $_GET['id'];
 $paramediks = $dbh->query("SELECT * FROM paramedik WHERE id = $id")->fetch();
 
 include_once('top.php');
-include_once('menu.php');
+//include_once('menu.php');
 ?>
 <head>
 
