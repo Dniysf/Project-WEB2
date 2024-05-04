@@ -52,6 +52,7 @@
           <li><a class="nav-link scrollto" href="periksa.php">Hasil periksa</a></li>
           <li><a class="nav-link scrollto" href="paramedik.php">Paramedik</a></li>
           <li><a class="nav-link scrollto" href="unit_kerja.php">Unit layanan</a></li>
+          <li><a class="nav-link scrollto" href="login.php">Login</a></li>
           <!--<li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
